@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //String input = args[0];
+        String input = args[0];
         //String input = "02f43824"; // rType
         //String input = "246600e0"; // iType
         //String input = "080000c7"; // jType
@@ -15,7 +15,7 @@ public class Main {
         //String input = "3c1d0071"; // iType lui
         //String input = "8fb20000"; // iType lw
         //String input = "3413ff20"; // iType ori
-        String input = "ac0d0000"; //iType sw
+        //String input = "ac0d0000"; //iType sw
 
         int binary = (int) Long.parseLong(input, 16);
 

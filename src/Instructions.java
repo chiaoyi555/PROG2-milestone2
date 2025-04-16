@@ -29,6 +29,7 @@ public class Instructions {
         }
         //shift
         int rs = (binary >>> 21) & 0x1F;
+
         int rt = (binary >>> 16) & 0x1F;
         int rd = (binary >>> 11) & 0x1F;
         int shmt = (binary >>> 6) & 0x1F;
@@ -57,7 +58,7 @@ public class Instructions {
         }
         int rsBase = (binary>>21) & 0x1F;
         int rt = (binary>>16) & 0x1F;
-        int immediateOffset = binary & 0x1FF; // mask - only want lower 16 bits
+        int immediateOffset = binary & 0xFFFF; // mask - only want lower 16 bits
         String output = String.format(mnemonic+" {opcode: %02x, rs(base): %02x, rt: %02x, immediate(offset): %04x}", opcode, rsBase, rt, immediateOffset);
         System.out.println(output);
     }
